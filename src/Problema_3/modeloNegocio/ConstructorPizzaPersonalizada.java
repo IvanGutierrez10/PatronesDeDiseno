@@ -1,8 +1,6 @@
 package Problema_3.modeloNegocio;
 
 import Problema_3.logica.ConstructorPizza;
-import Problema_3.modeloNegocio.Pizza;
-
 import java.util.List;
 
 public class ConstructorPizzaPersonalizada implements ConstructorPizza {
