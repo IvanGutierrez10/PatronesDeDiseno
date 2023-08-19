@@ -3,11 +3,11 @@ package Problema_2.modeloNegocio;
 import Problema_2.logica.FormaDePago;
 
 public class AdaptadorPSE implements FormaDePago {
-    private PSE nuevosistemaPse;
+    private PSE nuevoSistemaPse;
     private int montoAPagar;
 
-    public AdaptadorPSE(PSE nuevosistemaPse) {
-        this.nuevosistemaPse = nuevosistemaPse;
+    public AdaptadorPSE(PSE nuevoSistemaPse) {
+        this.nuevoSistemaPse = nuevoSistemaPse;
     }
 
     @Override
@@ -15,7 +15,7 @@ public class AdaptadorPSE implements FormaDePago {
         this.montoAPagar=montoAPagar;
         int montoPermitido;
 
-        montoPermitido=nuevosistemaPse.getMontoPermitido();
+        montoPermitido= nuevoSistemaPse.getMontoPermitido();
         if(montoAPagar<montoPermitido){
             return true;
         }
@@ -26,6 +26,6 @@ public class AdaptadorPSE implements FormaDePago {
 
     @Override
     public void realizarPago() {
-        nuevosistemaPse.descontarDinero(this.montoAPagar);
+        nuevoSistemaPse.descontarDinero(this.montoAPagar);
     }
 }
