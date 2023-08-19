@@ -1,4 +1,4 @@
-package Problema_2;
+package Problema_2.modeloNegocio;
 
 public class PSE {
     public int MontoPermitido;
@@ -14,6 +14,7 @@ public class PSE {
     public void descontarDinero(int montoAPagar){
         this.MontoPermitido = MontoPermitido-montoAPagar;
         System.out.println("Pago realizado con exito mediante PSE");
+        System.out.println("Saldo restante: "+this.MontoPermitido);
     }
 
 }

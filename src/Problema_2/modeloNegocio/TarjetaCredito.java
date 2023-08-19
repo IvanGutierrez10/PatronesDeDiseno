@@ -1,9 +1,17 @@
-package Problema_2;
+package Problema_2.modeloNegocio;
 
-public class TarjetaCredito implements FormaDePago{
+import Problema_2.logica.FormaDePago;
+
+public class TarjetaCredito implements FormaDePago {
+    private int montoDisponible;
+
+    public TarjetaCredito(int montoDisponible) {
+        this.montoDisponible = montoDisponible;
+    }
+
     @Override
     public boolean comprobarMontoDisponible(int montoAPagar) {
-        if(20000<montoAPagar){
+        if(montoDisponible>montoAPagar){
             return true;
         }
         else {

@@ -1,4 +1,4 @@
-package Problema_2;
+package Problema_2.logica;
 
 public interface FormaDePago {
     boolean comprobarMontoDisponible(int montoAPagar);

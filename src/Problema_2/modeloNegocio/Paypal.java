@@ -1,9 +1,17 @@
-package Problema_2;
+package Problema_2.modeloNegocio;
 
-public class Paypal implements FormaDePago{
+import Problema_2.logica.FormaDePago;
+
+public class Paypal implements FormaDePago {
+    private int montoDisponible;
+
+    public Paypal(int montoDisponible) {
+        this.montoDisponible = montoDisponible;
+    }
+
     @Override
     public boolean comprobarMontoDisponible(int montoAPagar) {
-        if(100000<montoAPagar){
+        if(montoDisponible>montoAPagar){
             return true;
         }
         else {
