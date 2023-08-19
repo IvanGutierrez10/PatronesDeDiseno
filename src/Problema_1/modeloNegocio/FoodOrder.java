@@ -1,33 +1,35 @@
-package Problema_1;
+package Problema_1.modeloNegocio;
+
+import Problema_1.logica.OrderProcessingTemplate;
 
 public class FoodOrder extends OrderProcessingTemplate {
     @Override
-    protected void verifyInventory() {
+    public void verifyInventory() {
         System.out.println("Verificando comida del inventario");
     }
 
     @Override
-    protected void calculateTotal() {
+    public void calculateTotal() {
         System.out.println("Calculando costo de la comida");
     }
 
     @Override
-    protected void applyDiscount() {
+    public void applyDiscount() {
         System.out.println("Aplicando descuento de la comida");
     }
 
     @Override
-    protected void additionalProcessing() {
+    public void additionalProcessing() {
         System.out.println("Procedimiento Adicional de comida");;
     }
 
     @Override
-    protected void generateInvoice() {
+    public void generateInvoice() {
         System.out.println("Generando factura de alimentos");
     }
 
     @Override
-    protected void notifyCustomer() {
+    public void notifyCustomer() {
         System.out.println("Notificando al cliente");
     }
 }

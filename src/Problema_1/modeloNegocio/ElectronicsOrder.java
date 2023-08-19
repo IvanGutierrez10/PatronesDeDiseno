@@ -1,6 +1,8 @@
-package Problema_1;
+package Problema_1.modeloNegocio;
 
-class ElectronicsOrder extends OrderProcessingTemplate {
+import Problema_1.logica.OrderProcessingTemplate;
+
+public class ElectronicsOrder extends OrderProcessingTemplate {
     @Override
     protected void verifyInventory() {
         System.out.println("Verificando inventario");

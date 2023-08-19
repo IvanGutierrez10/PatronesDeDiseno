@@ -1,4 +1,6 @@
-package Problema_1;
+package Problema_1.modeloNegocio;
+
+import Problema_1.logica.OrderProcessingTemplate;
 
 public class ClothingOrder extends OrderProcessingTemplate {
     @Override
@@ -17,7 +19,7 @@ public class ClothingOrder extends OrderProcessingTemplate {
     }
 
     @Override
-    void additionalProcessing() {
+    protected void additionalProcessing() {
         System.out.println("Procedimiento Adicional de ropa");
     }
 
