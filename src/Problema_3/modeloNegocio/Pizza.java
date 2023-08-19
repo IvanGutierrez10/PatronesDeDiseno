@@ -1,4 +1,4 @@
-package Problema_3;
+package Problema_3.modeloNegocio;
 
 import java.util.ArrayList;
 import java.util.List;

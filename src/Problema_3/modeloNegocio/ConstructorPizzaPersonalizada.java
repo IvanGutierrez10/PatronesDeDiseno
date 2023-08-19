@@ -1,8 +1,11 @@
-package Problema_3;
+package Problema_3.modeloNegocio;
+
+import Problema_3.logica.ConstructorPizza;
+import Problema_3.modeloNegocio.Pizza;
 
 import java.util.List;
 
-public class ConstructorPizzaPersonalizada implements ConstructorPizza{
+public class ConstructorPizzaPersonalizada implements ConstructorPizza {
     private Pizza pizza;
 
     public ConstructorPizzaPersonalizada(){
@@ -10,29 +13,29 @@ public class ConstructorPizzaPersonalizada implements ConstructorPizza{
     }
 
     @Override
-    public void addTamano(String tamano) {
+    public void buildTamano(String tamano) {
         this.pizza.setTamano(tamano);
     }
 
     @Override
-    public void addTipoDeMasa(String tipoDeMasa) {
+    public void buildTipoDeMasa(String tipoDeMasa) {
         this.pizza.setTipoDeMasa(tipoDeMasa);
     }
 
     @Override
-    public void addIngredientes(List<String> ingredientes) {
+    public void buildIngredientes(List<String> ingredientes) {
         for(String ingrediente : ingredientes){
             this.pizza.addIngredientes(ingrediente);
         }
     }
 
     @Override
-    public void addBordeExtraQueso(boolean bordeExtraQueso) {
+    public void buildBordeExtraQueso(boolean bordeExtraQueso) {
         this.pizza.setBordeExtraQueso(bordeExtraQueso);
     }
 
     @Override
-    public Pizza armarPizza() {
+    public Pizza buildPizza() {
         return this.pizza;
     }
 }
